@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `trasmissaotech` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `trasmissaotech`;
 -- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
 --
 -- Host: localhost    Database: trasmissaotech
@@ -33,6 +31,7 @@ CREATE TABLE `mentor` (
   `resumo` varchar(200) NOT NULL,
   `linkedin` varchar(45) NOT NULL,
   `atributo` varchar(200) NOT NULL,
+  `imagem` varchar(250) NOT NULL,
   PRIMARY KEY (`idmentor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -43,7 +42,7 @@ CREATE TABLE `mentor` (
 
 LOCK TABLES `mentor` WRITE;
 /*!40000 ALTER TABLE `mentor` DISABLE KEYS */;
-INSERT INTO `mentor` VALUES (1,'sophia','a@a.com','2021-11-27 15:40:21',1,'aaa','aa','javascript');
+INSERT INTO `mentor` VALUES (1,'sophia','a@a.com','2021-11-27 15:40:21',1,'aaa','aa','javascript','');
 /*!40000 ALTER TABLE `mentor` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-27 18:39:59
+-- Dump completed on 2021-11-27 20:47:21
