@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  background-image: linear-gradient(aquamarine, white, white);
+}
+
+main,
+section {
+    padding: 50px;
+}
+
+h1{
+    text-transform: uppercase;
+
+}
+   
+strong{
+    color: pink
+}
+.box {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+.main-img{
+    width: 500px;
+    height: 300px;
+    position:
+}
+
+.card-img-top{
+    width: 90px;
+}
+
+
+footer {
+    background-color: aquamarine;
+}
+.logo-footer{
+    width: 10%
+}
