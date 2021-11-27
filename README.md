@@ -1,7 +1,7 @@
  # <h1>ProviHack</h1>
 > Status do projeto: Em andamento
 
-<img align="center" alt="provi" height="250" width="250" src="https://github.com/blcrz/proviHack/blob/main/view/assets/img/proviHack.jfif">
+<img align="center" alt="provi" height="250" width="250" src="https://github.com/blcrz/proviHack/blob/main/FrontEnd/view/assets/img/proviHack.jfif">
 
 # Profissionais responsáveis pelo projeto:
 
