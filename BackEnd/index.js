@@ -4,6 +4,8 @@ const mysql = require("mysql")
 const cors = require("cors")
 const bcrypt = require("bcrypt")
 const saltRouns = 10
+const multer = require('multer');
+const parser = multer({ dest: 'public/uploads/' })
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -37,6 +39,19 @@ app.post("/register", (req, res) => {
             res.send({msg: 'email já existente'})
         }
     })
+})
+
+app.post('/upload', (req, res) => {
+    parser.single('avatar')(req, res, err => {
+        if (err)
+            res.status(500).json({ error: 1, payload: err });
+        else {
+            const image = {};
+            image.id = req.file.filename;
+            image.url = `/uploads/${image.id}`;
+            res.status(200).json({ error: 0, payload: { id: image.id, url: image.url } });
+        }
+    });
 })
 
 app.post('/login', (req, res) =>{

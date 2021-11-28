@@ -16,34 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `mentor`
+-- Table structure for table `mentorado`
 --
 
-DROP TABLE IF EXISTS `mentor`;
+DROP TABLE IF EXISTS `mentorado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `mentor` (
-  `idmentor` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `mentorado` (
+  `idmentorado` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
+  `senha` varchar(200) NOT NULL,
   `datanascimento` datetime NOT NULL,
-  `sexo` int NOT NULL,
-  `resumo` varchar(200) NOT NULL,
+  `sexo` varchar(45) NOT NULL,
   `linkedin` varchar(45) NOT NULL,
-  `atributo` varchar(200) NOT NULL,
   `imagem` varchar(250) NOT NULL,
-  PRIMARY KEY (`idmentor`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`idmentorado`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `mentor`
+-- Dumping data for table `mentorado`
 --
 
-LOCK TABLES `mentor` WRITE;
-/*!40000 ALTER TABLE `mentor` DISABLE KEYS */;
-INSERT INTO `mentor` VALUES (1,'sophia','a@a.com','2021-11-27 15:40:21',1,'aaa','aa','javascript','');
-/*!40000 ALTER TABLE `mentor` ENABLE KEYS */;
+LOCK TABLES `mentorado` WRITE;
+/*!40000 ALTER TABLE `mentorado` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mentorado` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
