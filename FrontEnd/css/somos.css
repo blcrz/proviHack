@@ -20,7 +20,7 @@ section,
 h1{
     color: #0F398C;
     text-transform: uppercase;
-    text-align: center;   
+    text-align: center;
 }
 
 strong{
@@ -38,6 +38,9 @@ strong{
     text-align: end;
 }
 
+.imagens{
+    width: 100%;
+}
 a {
     text-decoration: none;
     color:white
@@ -57,7 +60,7 @@ a {
     text-transform: uppercase;
     color:  #FFFFFF;
     border-color: #FFB6D7;
-  
+
 }
 
 .btn-outline-primary:hover{
