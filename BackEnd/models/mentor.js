@@ -68,6 +68,34 @@ class Mentor {
             }
         });
     }
+
+    lista(idUsuario, res) {
+        const sql = 'select * from mentor where idmentor <> ' + idUsuario
+
+        conexao.query(sql, (erro, resultados) => {
+            if(erro) {
+                res.status(400).json(erro)
+            } else {
+                res.status(200).json(resultados)
+            }
+        })
+    }
+
+    filtrar(filtros, res) {
+
+        const idUsuario = filtros.usuarioLogado
+        const filtro = filtros.filtro
+
+        const sql = 'select * from mentor where idmentor <> ' + idUsuario + ' and atributo like '+ `'%${filtro}%'` + 'or nome like '+ `'%${filtro}%'`
+
+        conexao.query(sql, (erro, resultados) => {
+            if(erro) {
+                res.status(400).json(erro)
+            } else {
+                res.status(200).json(resultados)
+            }
+        })
+    }
 }
 
 module.exports = new Mentor

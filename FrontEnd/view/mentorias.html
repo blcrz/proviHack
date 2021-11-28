@@ -27,84 +27,12 @@
     </section>
     <section class="filtro">
         <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Procurar">
-            <button class="btn btn-outline-success" type="submit">procurar</button>
+            <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Procurar" id="filtro">
+            <button class="btn btn-outline-success" type="submit" id="procurar">procurar</button>
         </form>
         </section>
         <section class="card1">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                            <button type="button" class="btn btn-outline-primary">Entre em contato</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.</p>
-                            <button type="button" class="btn btn-outline-primary">Entre em contato</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show that equal
-                            height action.</p>
-                            <button type="button" class="btn btn-outline-primary">Entre em contato</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </section>
-        <section class="card2">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                            <button type="button" class="btn btn-outline-primary">Entre em contato</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.</p>
-                            <button type="button" class="btn btn-outline-primary">Entre em contato</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show that equal
-                            height action.</p>
-                            <button type="button" class="btn btn-outline-primary">Entre em contato</button>
-                    </div>
-                </div>
-            </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="listaMentores">
         </div>
         </section>
     </main>
@@ -115,4 +43,12 @@
     </footer>
 </body>
 
+<!--Jquery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+<script src="../js/api/mentor.js"></script>
+<script src="../js/mentorias.js"></script>
 </html>
