@@ -9,7 +9,7 @@
 html,
 body {
   width: 100%;
-  background-image: linear-gradient(aquamarine, white, white);
+  background-image: linear-gradient(#cddafd, white, white);
 }
 
 main,
@@ -27,7 +27,7 @@ h2{
 }
    
 strong{
-    color: pink
+    color: #FD628A
 }
 .box {
     display: flex;
@@ -45,7 +45,7 @@ strong{
 
 
 footer {
-    background-color: aquamarine;
+    background-color: #cddafd;
 }
 .logo-footer{
     width: 10%
