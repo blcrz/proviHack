@@ -12,7 +12,7 @@ body {
     display:grid;
     grid-template-rows: 54px 4fr 1fr 54px;
 }
-/* tamanho do formulário */
+
 form {
     height: 100%;
     grid-row: 2/3;
@@ -24,7 +24,6 @@ form {
     margin: auto;
 }
 
-/* tamanhos dos inputs */
 form div, form select, form button {
     width: 80% !important;
 }
@@ -40,20 +39,4 @@ form div, form select, form button {
 
 footer {
     grid-row: 4/5;
-}
-
-@media (max-width: 800px) {
-
-    form {
-        width: 90%;
-    }
-
-}
-
-@media (max-width: 420px) {
-
-    body {
-        grid-template-rows: 80px 4fr 1fr 54px;
-    }
-
 }
