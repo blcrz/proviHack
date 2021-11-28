@@ -9,17 +9,21 @@
 html,
 body {
   width: 100%;
-  background-image: linear-gradient( white, white, #cddafd);
+  background-image: linear-gradient(#cddafd, white, white);
 }
 
 main,
 section {
     padding: 15px;
 }
+main{
+    height: 100vh;
+}
 h1{
     color: #0F398C;
     text-transform: uppercase;
     text-align: center;
+    font-size: 23px;
 }
 
 .btn-outline-success{
@@ -63,5 +67,5 @@ footer {
     background-color: #cddafd;
 }
 .logo-footer{
-    width: 10%
+    width: 10%; 
 }
