@@ -31,5 +31,20 @@ class Mentor {
             processData: false,
         })
     }
+
+    listar() {
+        return $.ajax({
+            url: this.apiUrl + '/mentor/' + localStorage.getItem('usuarioLogado'),
+            type: 'GET',
+        })
+    }
+
+    filtrar(params) {
+        return $.ajax({
+            url: this.apiUrl + '/filtro/mentor/',
+            type: 'GET',
+            data: params
+        })
+    }
 }
 

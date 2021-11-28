@@ -13,5 +13,12 @@ module.exports = app => {
         Mentor.login(req.body, res)
     })
 
+    app.get('/mentor/:id', (req, res) =>{
+        Mentor.lista(req.params.id, res)
+    })
+
+    app.get('/filtro/mentor', (req, res) =>{
+        Mentor.filtrar(req.body, res)
+    })
 }
 
