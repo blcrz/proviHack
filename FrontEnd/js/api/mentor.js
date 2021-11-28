@@ -9,4 +9,42 @@ class Mentor {
             data: params
         })
     }
+
+    cadastrar(params) {
+        return $.ajax({
+            url: this.apiUrl + '/mentor/registrar',
+            type: 'POST',
+            dataType: 'json',
+            data: params
+        })
+    }
+
+    upload(params) {
+        const formData = new FormData()
+        formData.set('avatar', params)
+
+        return $.ajax({
+            url: this.apiUrl + '/mentor/upload',
+            type: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false,
+        })
+    }
+
+    listar() {
+        return $.ajax({
+            url: this.apiUrl + '/mentor/' + localStorage.getItem('usuarioLogado'),
+            type: 'GET',
+        })
+    }
+
+    filtrar(params) {
+        return $.ajax({
+            url: this.apiUrl + '/filtro/mentor/',
+            type: 'GET',
+            data: params
+        })
+    }
 }
+
