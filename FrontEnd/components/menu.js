@@ -36,7 +36,7 @@ class menu extends HTMLElement {
         const img = document.createElement('img')
         img.className = 'nav-logo mx-5'
         const path = this.getAttribute('path-img-logo')
-        const pathImg = path ?? './assets/img/'
+        const pathImg = path ?? '../assets/img/'
         img.src = `${pathImg}logo.png`
 
         a.appendChild(img)
