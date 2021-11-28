@@ -6,8 +6,9 @@ $('#logar').click((e) => {
 function logar(e) {
     e.preventDefault()
     const perfil = $('#selectPerfil').val()
+    console.log(perfil)
 
-    const entidade = perfil === 1 ? new Mentor() : new Mentorado()
+    const entidade = perfil === '1' ? new Mentor() : new Mentorado()
     const params = {}
 
     params.email = $('#emailLogin').val()
