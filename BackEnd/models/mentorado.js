@@ -7,16 +7,17 @@ const parser = multer({ dest: 'public/uploads/' })
 
 class Mentorado {
     registrar(mentorado, res) {
-        const email = mentorado.email
-        const password = mentorado.password
+        const {
+            nome, email, senha, idade, sexo, linkedin, imagem
+        } = mentorado
 
-        conexao.query("SELECT * FROM users WHERE email = ?", [email], (err, result) => {
+        conexao.query("SELECT * FROM mentorado WHERE email = ?", [email], (err, result) => {
             if(err){
                 res.send(err)
             }
             if(result.length == 0){
-                bcrypt.hash(password, saltRouns, (err, hash) => {
-                    conexao.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, hash], (err, response) => {
+                bcrypt.hash(senha, saltRouns, (err, hash) => {
+                    conexao.query("INSERT INTO mentorado (nome, email, senha, idade, sexo, linkedin, imagem) VALUES (?, ?, ?, ?, ?, ?, ?)", [nome, email, hash, idade, sexo, linkedin, imagem ], (err, response) => {
                         if(err){
                             res.send(err)
                         }
@@ -32,14 +33,14 @@ class Mentorado {
 
     login(mentorado, res){
         const email = mentorado.email
-        const password = mentorado.password
+        const senha = mentorado.senha
 
-        conexao.query("SELECT * FROM users WHERE email = ? ", [email], (err, result) => {
+        conexao.query("SELECT * FROM mentorado WHERE email = ? ", [email], (err, result) => {
             if(err){
                 res.send(err);
             }
             if(result.length > 0){
-                bcrypt.compare(password, result[0].password, (erro, result) => {
+                bcrypt.compare(senha, result[0].senha, (erro, result) => {
                     if(result){
                         res.send({msg: "Usuario logado com sucesso"})
                     } else {
