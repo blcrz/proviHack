@@ -9,4 +9,13 @@ class Mentorado {
             data: params
         })
     }
+
+    cadastrar(params) {
+        return $.ajax({
+            url: this.apiUrl + '/mentorado/registrar',
+            type: 'POST',
+            dataType: 'json',
+            data: params
+        })
+    }
 }
