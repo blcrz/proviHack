@@ -93,16 +93,17 @@ class menu extends HTMLElement {
         const li3 = document.createElement('li')
         li3.className = 'nav-item px-3'
 
-        const ali3 = document.createElement('a')
-        ali3.classList.add('nav-link')
-        ali3.innerHTML = 'pessoas mentoras'
-        ali3.href = `${pathPages}mentorias.html`
-
-        li3.appendChild(ali3)
-        ul.appendChild(li3)
-
         const login = localStorage.getItem('login')
 
+        if(login){
+            const ali3 = document.createElement('a')
+            ali3.classList.add('nav-link')
+            ali3.innerHTML = 'pessoas mentoras'
+            ali3.href = `${pathPages}mentorias.html`
+
+            li3.appendChild(ali3)
+            ul.appendChild(li3)
+        }
 
         const li4 = document.createElement('li')
         li4.className = 'nav-item px-3'
@@ -111,6 +112,7 @@ class menu extends HTMLElement {
         ali4.classList.add('nav-link')
         ali4.innerHTML = !login ? 'login' : 'sair'
         ali4.href = `${pathPages}login.html`
+        ali4.onclick = login ? this.logout : null
 
         li4.appendChild(ali4)
         ul.appendChild(li4)
@@ -137,6 +139,11 @@ class menu extends HTMLElement {
         } else {
             options.classList.add('show')
         }
+    }
+
+    logout() {
+        localStorage.removeItem('login')
+        localStorage.removeItem('usuarioLogado')
     }
 
     style(){

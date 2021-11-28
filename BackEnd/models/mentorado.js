@@ -40,15 +40,16 @@ class Mentorado {
                 res.send(err);
             }
             if(result.length > 0){
+                const idmentorado = result[0].idmentorado
                 bcrypt.compare(senha, result[0].senha, (erro, result) => {
                     if(result){
-                        res.send({msg: "Usuario logado com sucesso"})
+                        res.status(200).json({msg: "Usuario logado com sucesso", id: idmentorado})
                     } else {
-                        res.send({msg: 'senha incorreta'})
+                        res.status(401).json({msg: 'senha incorreta'})
                     }
                 })
             } else {
-                res.send({msg: "email não encontrado"})
+                res.status(400).json({msg: "email não encontrado"})
             }
         })
     }

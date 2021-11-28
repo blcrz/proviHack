@@ -1,9 +1,10 @@
 // const moment = require('moment')
 const bcrypt = require("bcrypt")
-const saltRouns = 10
 const conexao = require('../infra/conexao')
 const multer = require('multer');
+
 const parser = multer({ dest: 'public/uploads/' })
+const saltRouns = 10
 
 class Mentor {
     registrar(mentor, res) {
@@ -40,15 +41,17 @@ class Mentor {
                 res.send(err);
             }
             if(result.length > 0){
+                const idmentor = result[0].idmentor
+
                 bcrypt.compare(senha, result[0].senha, (erro, result) => {
                     if(result){
-                        res.send({msg: "Usuario logado com sucesso"})
+                        res.status(200).json({msg: "Usuario logado com sucesso", id: idmentor})
                     } else {
-                        res.send({msg: 'senha incorreta'})
+                        res.status(401).json({msg: 'senha incorreta'})
                     }
                 })
             } else {
-                res.send({msg: "email não encontrado"})
+                res.status(400).json({msg: "email não encontrado"})
             }
         })
     }
