@@ -8,21 +8,21 @@
 
 html,
 body {
+  height: 100%;
   width: 100%;
   background-image: linear-gradient(#cddafd, white, white);
+  background-repeat: no-repeat;
+  
 }
 
 main,
 section {
     padding: 15px;
 }
-main{
-    height: 100vh;
-}
+
 h1{
     color: #0F398C;
     text-transform: uppercase;
-    text-align: center;
     font-size: 23px;
 }
 
@@ -65,6 +65,9 @@ h1{
 
 footer {
     background-color: #cddafd;
+     position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 .logo-footer{
     width: 10%; 
