@@ -82,7 +82,6 @@ class Mentor {
     }
 
     filtrar(filtros, res) {
-
         const idUsuario = filtros.usuarioLogado
         const filtro = filtros.filtro
 

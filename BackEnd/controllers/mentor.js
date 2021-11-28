@@ -18,7 +18,7 @@ module.exports = app => {
     })
 
     app.get('/filtro/mentor', (req, res) =>{
-        Mentor.filtrar(req.body, res)
+        Mentor.filtrar(req.query, res)
     })
 }
 

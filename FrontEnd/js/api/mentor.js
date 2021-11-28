@@ -43,7 +43,8 @@ class Mentor {
         return $.ajax({
             url: this.apiUrl + '/filtro/mentor/',
             type: 'GET',
-            data: params
+            data: params,
+            dataType: 'json',
         })
     }
 }
