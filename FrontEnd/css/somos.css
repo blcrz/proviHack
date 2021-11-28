@@ -38,37 +38,6 @@ strong{
     text-align: end;
 }
 
-a {
-    text-decoration: none;
-    color:white
-}
-
-
-
-.btn-outline-success{
-    background-color: #FD628A;
-    text-align: center;
-    text-transform: uppercase;
-    color:  #FFFFFF;
-    border-color: #FFB6D7;
-}
-
-.btn-outline-primary{
-    background-color: #FD628A;
-    text-align: center;
-    text-transform: uppercase;
-    color:  #FFFFFF;
-    border-color: #FFB6D7;
-  
-}
-
-.btn-outline-primary:hover{
-    background-color: #FFFFFF;
-    text-align: center;
-    text-transform: uppercase;
-    color:  #FD628A;
-    border-color: #FFB6D7;
-}
 
 footer {
     background-color: #cddafd;
