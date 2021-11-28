@@ -27,7 +27,7 @@ CREATE TABLE `mentorado` (
   `nome` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `senha` varchar(200) NOT NULL,
-  `datanascimento` datetime NOT NULL,
+  `idade` int NOT NULL,
   `sexo` varchar(45) NOT NULL,
   `linkedin` varchar(45) NOT NULL,
   `imagem` varchar(250) NOT NULL,
