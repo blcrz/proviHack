@@ -90,7 +90,7 @@ Durante a construção do projeto, que foi estrutrado em *MVC*, utilizamos as se
 
 - A plataforma contará com melhorias que possibilitam o agendamento de mentorias diretamente pela plataforma;
 - A plataforma possibilita também que tech recruiters se cadastrem e possam buscar futuros profissionais para que façam parte do time de colaboradores da empresa;
-- A plataforma terá a pessobilidade de realizar o agendamento das mentoras diretamente pelo site e também serão fornecidos atendimentos psicológicos e de telemedicina;
+- A plataforma terá a possibilidade de realizar o agendamento das mentoras diretamente pelo site e também serão fornecidos atendimentos psicológicos e de telemedicina;
 - A plataforma contará com um painel onde o mentorado poderá visualizar os mentores disponíveis cadastrados, em que ele realizará a conexão e poderá iniciar as mentorias, além de um maior número de mentores trans e pessoas que abracem a causa LGBTQIA+;
 
 ---
