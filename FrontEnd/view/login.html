@@ -10,7 +10,6 @@
   <link rel="stylesheet" type="text/css" href="../css/mentoria.css">
   <link href="../css/style.css" rel="stylesheet">
   <link href="../css/login.css" rel="stylesheet">
-
   <script src="../js/handleLogout.js"></script>
 </head>
 
@@ -20,87 +19,95 @@
   </header>
 
   <form>
+    <h1>Faça seu login</h1>
     <div>
       <label for="exampleInputEmail1" class="form-label">Email: </label>
       <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div>
       <label for="exampleInputPassword1" class="form-label">Senha:</label>
       <input type="password" class="form-control" id="senhaLogin">
     </div>
-    <select class="form-select" id="selectPerfil" aria-label="Default select example">
-      <option selected>Escolha seu tipo de perfil</option>
-      <option value="1">pessoa mentora</option>
-      <option value="2">pessoa mentorada</option>
-    </select>
+    <div>
+      <select class="form-select" id="selectPerfil" aria-label="Default select example">
+        <option selected>Escolha seu tipo de perfil</option>
+        <option value="1">pessoa mentora</option>
+        <option value="2">pessoa mentorada</option>
+      </select>
+  </div>
     <button type="submit" class="btn btn-primary" id="logar">Entrar</button>
-  </form>
-  <div id="alerta"></div>
+    
+    <div id="alerta">
+    </div>
 
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-link btn-create" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Quero me cadastrar
-  </button>
+    <!-- Button trigger modal -->
+    <div class="botoescadastro">
+    <button type="button" class="btn btn-link btn-create" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Quero me cadastrar </button>
+
+    <button type="button" class="btn btn-link btn-create">
+      Esqueci minha senha </button>
+    </div>
+</form>
 
   <!-- Modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <label for="nome" class="form-label">Selecione o perfil desejado </label>
+        <select class="form-select" id="categoria" aria-label="Default select example">
+          <option selected value="1">pessoa mentora</option>
+          <option value="2">pessoa mentorada</option>
+        </select>
+        <div class>
+          <label for="formFile" class="form-label">Selecione uma foto para seu perfil:</label>
+          <input class="form-control" type="file" id="img">
         </div>
-        <div class="modal-body">
-          <label for="nome" class="form-label">Selecione o perfil desejado </label>
-          <select class="form-select" id="categoria" aria-label="Default select example">
-            <option selected value="1">pessoa mentora</option>
-            <option value="2">pessoa mentorada</option>
-          </select>
-          <div class>
-            <label for="formFile" class="form-label">Selecione uma foto para seu perfil:</label>
-            <input class="form-control" type="file" id="img">
-          </div>
-          <label for="nome" class="form-label">Nome: </label>
-          <input class="form-control" type="text" placeholder="Nome completo" id="nome"
-            aria-label="default input example">
-          <label for="" class="form-label">Email: </label>
-          <input class="form-control" type="text" placeholder="email@email.com" id="email"
-            aria-label="default input example">
-          <label for="" class="form-label">Senha: </label>
-          <input class="form-control" type="password" placeholder="********" id="senha"
-            aria-label="default input example">
-          <label for="" class="form-label">Idade: </label>
-          <input class="form-control" type="number" placeholder="ex: 18" id="idade" aria-label="default input example">
-          <label for="" class="form-label">Gênero </label>
-          <select class="form-select" id="genero" aria-label="Default select example">
-            <option selected value="1">Não Binário</option>
-            <option value="2">Mulher</option>
-            <option value="3">Homem</option>
-          </select>
-          <div id="campoResumo">
-            <label for="" class="form-label">Compartilha com a gente um pouco da sua jornada até aqui: </label>
-            <input class="form-control" type="text" placeholder="resumo" id="resumo" aria-label="default input example">
-          </div>
-          <label for="" class="form-label">Linkedin: </label>
-          <input class="form-control" type="text" placeholder="www.linkedin.com/exemplo " id="linkedin"
-            aria-label="default input example">
-          <div id="campoSkill">
-            <label for="" class="form-label">Skills </label>
-            <input class="form-control" type="text"
-              placeholder="(ex.: desenvolvimento, frontend, backend, comunicação, liderança, etc)" id="atributo"
-              aria-label="default input example">
-          </div>
+        <label for="nome" class="form-label">Nome: </label>
+        <input class="form-control" type="text" placeholder="Nome completo" id="nome"
+          aria-label="default input example">
+        <label for="" class="form-label">Email: </label>
+        <input class="form-control" type="text" placeholder="email@email.com" id="email"
+          aria-label="default input example">
+        <label for="" class="form-label">Senha: </label>
+        <input class="form-control" type="password" placeholder="********" id="senha"
+          aria-label="default input example">
+        <label for="" class="form-label">Idade: </label>
+        <input class="form-control" type="number" placeholder="ex: 18" id="idade" aria-label="default input example">
+        <label for="" class="form-label">Gênero </label>
+        <select class="form-select" id="genero" aria-label="Default select example">
+          <option selected value="1">Não Binário</option>
+          <option value="2">Mulher</option>
+          <option value="3">Homem</option>
+        </select>
+        <div id="campoResumo">
+          <label for="" class="form-label">Compartilha com a gente um pouco da sua jornada até aqui: </label>
+          <input class="form-control" type="text" placeholder="resumo" id="resumo" aria-label="default input example">
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary" id="btnCadastrar">Cadastrar</button>
+        <label for="" class="form-label">Linkedin: </label>
+        <input class="form-control" type="text" placeholder="www.linkedin.com/exemplo " id="linkedin"
+          aria-label="default input example">
+        <div id="campoSkill">
+          <label for="" class="form-label">Skills </label>
+          <input class="form-control" type="text"
+            placeholder="(ex.: desenvolvimento, frontend, backend, comunicação, liderança, etc)" id="atributo"
+            aria-label="default input example">
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" id="btnCadastrar">Cadastrar</button>
       </div>
     </div>
   </div>
-</div>
+  </div>
+  </div>
 <footer>
     <div class="text-center p-3">
         <img src="../assets/img/logo.png" alt="some text" class="logo-footer">
