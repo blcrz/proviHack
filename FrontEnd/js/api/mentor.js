@@ -20,8 +20,10 @@ class Mentor {
     }
 
     upload(params) {
+        console.log(params)
         const formData = new FormData()
         formData.set('avatar', params)
+        console.log(formData)
 
         return $.ajax({
             url: this.apiUrl + '/mentor/upload',
@@ -43,7 +45,8 @@ class Mentor {
         return $.ajax({
             url: this.apiUrl + '/filtro/mentor/',
             type: 'GET',
-            data: params
+            data: params,
+            dataType: 'json',
         })
     }
 }

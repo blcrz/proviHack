@@ -12,7 +12,7 @@ body {
   width: 100%;
   background-image: linear-gradient(#cddafd, white, white);
   background-repeat: no-repeat;
-  
+
 }
 
 main,
@@ -40,7 +40,7 @@ h1{
     text-transform: uppercase;
     color:  #FFFFFF;
     border-color: #FFB6D7;
-  
+
 }
 
 .btn-outline-primary:hover{
@@ -70,5 +70,20 @@ footer {
     width: 100%;
 }
 .logo-footer{
-    width: 10%; 
+    width: 10%;
+}
+
+.card-detail {
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+}
+
+.icone-contato {
+    width: 10%;
+    cursor: pointer;
+}
+
+.card-mentores{
+    max-width: 300px;
 }
