@@ -9,16 +9,15 @@
 html,
 body {
   width: 100%;
-  background-image: linear-gradient(#cddafd, white, white);
+  background-image: linear-gradient(#e8f6fd, white, white);
+  background-repeat: no-repeat;
 }
 
 main,
 section {
     padding: 15px;
 }
-main{
-    height: 100vh;
-}
+
 h1{
     color: #0F398C;
     text-transform: uppercase;
@@ -40,7 +39,7 @@ h1{
     text-transform: uppercase;
     color:  #FFFFFF;
     border-color: #FFB6D7;
-  
+
 }
 
 .btn-outline-primary:hover{
@@ -64,8 +63,23 @@ h1{
 
 
 footer {
-    background-color: #cddafd;
+    background-color: #e8f6fd;
 }
 .logo-footer{
-    width: 10%; 
+    width: 10%;
+}
+
+.card-detail {
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+}
+
+.icone-contato {
+    width: 10%;
+    cursor: pointer;
+}
+
+.card-mentores{
+    max-width: 300px;
 }

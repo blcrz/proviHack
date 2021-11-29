@@ -10,7 +10,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(#cddafd, white, white);
+  background-image: linear-gradient(#badff2, white, white);
 }
 #home{
     display: flex;
@@ -18,7 +18,7 @@ body {
 }
 #title{
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 40px;
 }
 #busca{
     font-size: 20px;
@@ -56,7 +56,7 @@ strong{
 
 
 footer {
-    background-color: #cddafd;
+    background-color: #badff2;
 }
 .logo-footer{
     width: 10%

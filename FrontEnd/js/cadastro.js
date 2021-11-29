@@ -5,6 +5,8 @@ $('#btnCadastrar').click((e) => {
 })
 
 $('#img').change((e) => {
+    e.preventDefault()
+
     upload(e)
 })
 
@@ -29,6 +31,7 @@ function upload(){
 
         result.done((response) => {
             idFoto = response.payload.id
+
         }).fail((err) => {
             console.log(err)
         })
